@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Creates the posts table with title, text, comments_counter, likes_counters, and author_id columns.
 class CreatePosts < ActiveRecord::Migration[7.0]
   def change
     create_table :posts do |t|

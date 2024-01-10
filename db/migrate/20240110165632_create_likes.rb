@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Creates the likes table with post_id and author_id columns.
 class CreateLikes < ActiveRecord::Migration[7.0]
   def change
     create_table :likes do |t|
