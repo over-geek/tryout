@@ -1,0 +1,11 @@
+<%= form_with(model: [user, post], local: true, url: user_posts_path(user)) do |f| %>
+  <div class="form_group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form_control' %>
+  </div>
+  <div class="form_group">
+    <%= f.label :text %>
+    <%= f.text_area :text, class: 'form_control' %>
+  </div>
+  <%= f.submit "Save post", class: 'btn' %>
+<% end %>
