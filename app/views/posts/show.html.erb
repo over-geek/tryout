@@ -24,13 +24,6 @@
     <% end %>
   </div>
   <div class="text-center p-4">
-    <h3>add like</h3>
-    <h3>Add a comment: </h3>
-    <%= form_for [@user, @post, @comment] do |form| %>
-      <div>
-        <%= form.text_area :text, placeholder: "Add comment", class: "form-control" %>
-      </div>
-      <%= form.submit "Add Comment", class: "btn btn-outline-secondary rounded-pill m-2" %>
-    <% end %>
+    <%= link_to 'Create a Comment', new_user_post_comment_path(@post.author, @post), class: 'btn' %>
   </div>
 </section>
