@@ -8,14 +8,14 @@ class CommentsController < ApplicationController
   def create
     @post = Post.find(params[:post_id])
     @comment = Comment.new(comment_params.merge(post: @post))
-    @comment.author = @post.author
+    @comment.author = current_user
 
     if @comment.save
       flash[:success] = 'Comment successfully added! 😎'
       redirect_to user_post_path(@post.author, @post)
     else
       flash[:alert] = 'Comment not added! 😢'
-      puts @comment.errors.full_messages # This will print validation errors to the console
+      puts flash[:alert]
       render :new, status: :unprocessable_entity
     end
   end
