@@ -2,7 +2,7 @@
   <div class="border border-5 p-1 mb-3">
     <div class="d-flex justify-content-between align-items-center">
       <h2>
-        Post #<%= @post.id %> by <%= @user.name %>
+        <%= @post.title %> #<%= @post.id %> by <%= @user.name %>
       </h2>
       <div>
         <span>Comments: <%= @post.comments_counter %></span>
