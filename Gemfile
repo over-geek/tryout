@@ -11,6 +11,8 @@ gem 'rails', '~> 7.0.8'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
+gem 'factory_bot_rails'
+
 # Use rails controller testing gem
 gem 'rails-controller-testing'
 
@@ -68,6 +70,7 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem 'spring'
+  gem 'bullet'
 end
 
 group :test do
