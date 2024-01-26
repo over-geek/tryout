@@ -39,10 +39,10 @@ RSpec.describe 'Visit the user show page', type: :feature do
   end
 
   # Ensure that user is redirected to post index page to see all posts when see all posts button is clicked
-  it 'Asserts that I can see a button that lets me view all of a user's posts' do
+  it 'Asserts that I can see a button that lets me view all of a users posts' do
     visit user_path(@user)
 
-    #expect to see 'See All Posts' button
+    #expect to see See All Posts button
     expect(page).to have_content 'See All Posts'
 
     click_link 'See All Posts'
