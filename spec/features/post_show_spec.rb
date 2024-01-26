@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Visit the post show page", type: :feature do
+RSpec.describe 'Visit the post show page', type: :feature do
   before :each do
     @user = User.create(name: 'John Doe', photo: 'user_photo_url', bio: 'Sample bio')
     @post = Post.create(author: @user, title: 'Post Title', text: 'Post body text')

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Visit the user post index page", type: :feature do
+RSpec.describe 'Visit the user post index page', type: :feature do
   before :each do
     @user = User.create(
       name: 'John Doe',
@@ -17,7 +17,7 @@ RSpec.describe "Visit the user post index page", type: :feature do
   it 'displays user information and posts on the index page' do
     visit user_posts_path(@user)
 
-    expect(page).to have_selector('img[src="https://randomuser.me/api/portraits/men/1.jpg"]')
+    expect(page).to have_selector('img[src='https://randomuser.me/api/portraits/men/1.jpg']')
     expect(page).to have_content 'John Doe'
     expect(page).to have_content 'Number of posts: 2'
     expect(page).to have_content 'Post 1'
@@ -39,7 +39,7 @@ RSpec.describe "Visit the user post index page", type: :feature do
 
   it 'displays pagination if there are more posts than fit on the view' do
     # Create additional posts to exceed the default per-page limit
-    10.times { |i| Post.create(author: @user, title: "Post #{i + 3}", text: "This is the content of Post #{i + 3}") }
+    10.times { |i| Post.create(author: @user, title: 'Post #{i + 3}', text: 'This is the content of Post #{i + 3}') }
 
     visit user_posts_path(@user)
 
