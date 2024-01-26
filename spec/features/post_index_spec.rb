@@ -17,7 +17,7 @@ RSpec.describe 'Visit the user post index page', type: :feature do
   it 'displays user information and posts on the index page' do
     visit user_posts_path(@user)
 
-    expect(page).to have_selector('img[src='https://randomuser.me/api/portraits/men/1.jpg']')
+    expect(page).to have_selector('img[src=\'https://randomuser.me/api/portraits/men/1.jpg\']')
     expect(page).to have_content 'John Doe'
     expect(page).to have_content 'Number of posts: 2'
     expect(page).to have_content 'Post 1'

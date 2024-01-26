@@ -15,7 +15,7 @@ RSpec.describe 'Visit the user show page', type: :feature do
   it 'displays user information on the show page' do
     visit user_path(@user)
 
-    expect(page).to have_selector('img[src='https://randomuser.me/api/portraits/men/1.jpg']')
+    expect(page).to have_selector('img[src=\'https://randomuser.me/api/portraits/men/1.jpg\']')
     expect(page).to have_content 'John Doe'
     expect(page).to have_content 'Number of posts: 3'
     expect(page).to have_content 'A passionate individual with interesting stories to share.'
