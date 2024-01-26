@@ -39,7 +39,7 @@ RSpec.describe 'Visit the user post index page', type: :feature do
 
   it 'displays pagination if there are more posts than fit on the view' do
     # Create additional posts to exceed the default per-page limit
-    10.times { |i| Post.create(author: @user, title: 'Post #{i + 3}', text: 'This is the content of Post #{i + 3}') }
+    10.times { |i| Post.create(author: @user, title: "Post #{i + 3}", text: "This is the content of Post #{i + 3}") }
 
     visit user_posts_path(@user)
 
